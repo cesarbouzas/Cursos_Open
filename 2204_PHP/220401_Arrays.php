@@ -6,13 +6,14 @@
     <title>Practicas Arrays</title>
 </head>
 <body>
+    <pre>
     <?php
     $dias=array("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo");
     $meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","septiembre","Octubre","Noviembre","Diembre"];
     $vacio=array();
     $vacio2=[];
     $sinDefinir=array(15);
-
+    
     var_dump($dias);
     echo "<br>";
     var_dump($meses);
@@ -22,6 +23,7 @@
     var_dump($vacio2);
     echo"<br>";
     var_dump($sinDefinir);
-    ?>    
+    ?> 
+    </pre>   
 </body>
 </html>
