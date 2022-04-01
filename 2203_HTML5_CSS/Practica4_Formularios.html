@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica formularios</title>
+    <style>
+        * {
+            color: black;
+        }
+        
+        #enviar {
+            margin-top: 20px;
+            width: 100px;
+            height: 30px;
+        }
+        
+        #enviar:hover {
+            background-color: red;
+            color: blue;
+        }
+        
+        legend {
+            margin-top: 20px;
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+        }
+        
+        form ul {
+            list-style: none;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #Zona1 {
+            background-color: rgb(199, 189, 189);
+        }
+        
+        #Zona2,
+        #Zona3 {
+            margin-top: 20px;
+        }
+        
+        #Zona2 {
+            background-color: rgb(132, 116, 86);
+        }
+        
+        #Zona3 {
+            background-color: rgba(233, 116, 80, 0.938);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HOJA DE INSCRIPCIÓN </h1>
+    <h1>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+    <form method="post" action="">
+        <fieldset id="Zona1">
+            <legend><b>Datos personales</b></legend>
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="nombre">Nombre:</label>
+                    </td>
+                    <td>
+                        <label for="apellidos">Apellidos:</label>
+                    </td>
+                    <td>
+                        <label for="dni">DNI:</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="nombre" name="nombre" />
+                    </td>
+                    <td>
+                        <input type="text" id="apellidos" name="apellidos" />
+                    </td>
+                    <td>
+                        <input type="dni" id="dni" name="dni" />
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><label for="localidadNacimiento">Localidad de Nacimiento :</label></td>
+                    <td><label for="provincia">Provincia:</label></td>
+                    <td><label for="fechaNacimiento">Fecha de Nacimiento</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="localidadNacimiento" name="localidadNacimiento" />
+                    </td>
+                    <td>
+                        <select id="provincia" id="provincia" placeholder="Selecciona">
+                            <option value="cor">A Coruña</option>
+                            <option value="po">Pontevedra</option>
+                            <option value="lu">Lugo</option>
+                            <option value="ou">Ourense</option>
+                    </select>
+                    </td>
+                    <td>
+                        <input type="date" id="fechaNacimeinto" name="fechaNacimiento" placeholder="dd/mm/aaaa" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="direccion">Dirección:</label>
+                    </td>
+                    <td>
+                        <label for="cp">Código postal:</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" id="direccion" name="direccion" />
+                    </td>
+                    <td>
+                        <input type="number" pattern="[0-9]5" id="cp" name="cp" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset id="Zona2">
+            <legend><b>Forma de Acceso</b></legend>
+            <ul>
+                <li>
+                    <input type="radio" id="directo" name="forma">Directo</radio>
+                    <ul>
+                        <li><input type="radio" name="tipoDirecto" id="Logse">Bachirerato LOGSE.Modalidad:
+                            <input type="text" id="modalidadLogse" name="modalidadLogse">
+                        </li>
+                        <li>
+                            <input type="radio" id="experimental" name="tipoDirecto"> Experimental.
+                        </li>
+                        <li><input type="radio" name="tipoDirecto" id="cou">COU. Opcion:
+                            <input type="text" id="opcionCou">
+                        </li>
+                        <li>
+                            <input type="radio" name="tipoDirecto" id="fp2">FP2.
+                        </li>
+                        <li>
+                            <input type="radio" name="tipoDirecto" id="otros">Otros.Especifique :
+                            <input type="text" name="txtOtros" id="txtOtros">
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <input type="radio" name="forma" id="libre">Libre
+                </li>
+            </ul>
+
+        </fieldset>
+        <fieldset id="Zona3">
+            <legend><b>Documentos Adjuntos</b></legend>
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="docuDNI" id="docuDni">Fotocopia DNI.
+                    </td>
+                    <td>
+                        <input type="checkbox" name="docuCert" id="docuCert">Certidficado Académico.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="docuOtros">Otros documentos (especifique):</label>
+                        <input type="text" id="docuOtros" name="docuOtros">
+                    </td>
+
+                </tr>
+            </table>
+        </fieldset>
+
+        <input type="submit" id="enviar" name="enviar">
+
+    </form>
+
+
+
+
+</body>
+
+</html>
