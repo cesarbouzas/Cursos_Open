@@ -20,16 +20,13 @@ $sum=$num1+$num2;
 echo "Suma =".($num1+$num2);
 
 echo "<br>";
-
 echo $num1."x".$num2."=".($num1*$num2);
 
 echo "<br>";
-
 echo $num2."/".$num1." tiene un resto de ".($num2%$num1);
 
 echo "<br>";
-
-echo $num2." elevado ".$num1."=".($num2**$num1);
+echo $num2." elevado  a".$num1."=".($num2**$num1);
 
 
 
