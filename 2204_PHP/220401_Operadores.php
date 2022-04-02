@@ -26,7 +26,20 @@ echo "<br>";
 echo $num2."/".$num1." tiene un resto de ".($num2%$num1);
 
 echo "<br>";
-echo $num2." elevado  a".$num1."=".($num2**$num1);
+echo $num2." elevado  a ".$num1."=".($num2**$num1);
+
+//Operadores de asignacion
+
+$num3=0;
+$num2="5";
+$num3=$num1;
+echo "<br>";
+echo $num3;
+echo "<br>";
+echo ($num3===$num1);
+echo "<br>";
+echo ($num3==$num2)?"true":"false";
+
 
 
 
