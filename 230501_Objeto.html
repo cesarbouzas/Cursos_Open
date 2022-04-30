@@ -17,12 +17,17 @@
         <p id="resultado" name="resultado"></p>
     </form>
     <script>
+        //P1 no es una persona es un Object con los datos de persona, que no es exactamente lo que solemos hacer cuando usamos clases aunque no esta mal tampoco
         let p1 = Object.create(persona);
         console.log(p1.saludar());
         let resultado = document.getElementById("resultado");
 
         let nombre = document.getElementById("nombre");
-        nombre.addEventListener("change", resultado.innerHTML = p1.cambiarNombre(nombre));
+        //nombre.addEventListener("change", resultado.innerHTML = p1.cambiarNombre(nombre));
+        // Aqui tenemos que definir un function en si no poner solo el código
+        nombre.addEventListener("change", ()=>{
+            resultado.innerHTML = p1.cambiarNombre(nombre.value) //le faltaba el value
+        })
     </script>
 </body>
 
