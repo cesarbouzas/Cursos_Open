@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+                                        let dni = document.getElementById("dni");
+
+                                        console.log(dni);
+                                        if (dni != null) {
+                                            dni.addEventListener("blur", calculoLetraDni);
+                                        }
+
+                                        function calculoLetraDni() {
+
+                                            let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T']
+                                            let pos = dni % 23
+                                            document.getElementById("letra").innerHTML = letras[pos]
+                                        }
+                                        */
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <form method="post" action="220427_conexion.php">
+        <fieldset>
+            <legend>Datos Contacto</legend>
+            <p>
+                <label id="lnombre" for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" />
+            </p>
+            <p>
+                <label id="lapellido1" for="apellido1">Apellido1:</label>
+                <input type="text" id="apellido1" name="apellido1" />
+            </p>
+            <p>
+                <label id="lapellido2" for="apellido2">Apellido2:</label>
+                <input type="text " id="apellido2 " name="apellido2" />
+            </p>
+            <p>
+                <label id="ldni" for="dni">DNI:</label>
+                <input type="number" id="dni" name="dni" />
+                <label id="letra">..</label>
+            </p>
+
+            <input type="submit" />
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

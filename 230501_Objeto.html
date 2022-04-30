@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="220501_persona.js"></script>
+</head>
+
+<body>
+    <h1>Practica de objetos</h1>
+    <form>
+        <label>Nombre</label>
+        <input type="text" id="nombre" name="nombre" />
+        <p id="resultado" name="resultado"></p>
+    </form>
+    <script>
+        let p1 = Object.create(persona);
+        console.log(p1.saludar());
+        let resultado = document.getElementById("resultado");
+
+        let nombre = document.getElementById("nombre");
+        nombre.addEventListener("change", resultado.innerHTML = p1.cambiarNombre(nombre));
+    </script>
+</body>
+
+</html>
