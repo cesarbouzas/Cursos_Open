@@ -18,11 +18,15 @@
     </form>
     <script>
         let p1 = Object.create(persona);
-        console.log(p1.saludar());
         let resultado = document.getElementById("resultado");
-
         let nombre = document.getElementById("nombre");
-        nombre.addEventListener("change", resultado.innerHTML = p1.cambiarNombre(nombre));
+
+
+        function escribirResultado() {
+            resultado.innerHTML = p1.cambiarNombre(nombre.value);
+        }
+
+        nombre.addEventListener("change", escribirResultado)
     </script>
 </body>
 
