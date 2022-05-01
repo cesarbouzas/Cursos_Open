@@ -1,32 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="220501_persona.js"></script>
 </head>
 
 <body>
-    <h1>Practica de objetos</h1>
+    <h1>Práctica de objetos</h1>
     <form>
-        <label>Nombre</label>
-        <input type="text" id="nombre" name="nombre" />
-        <p id="resultado" name="resultado"></p>
+        <p>
+            <label>Nombre :</label>
+            <input type="text" id="nombre" name="nombre" />
+        </p>
+        <p>
+            <label>Apellido 1:</label>
+            <input type="text" id="apellido1" name="apellido1" />
+        </p>
+        <p>
+            <label>Apellido 2:</label>
+            <input type="text" id="apellido2" name="apellido2" />
+        </p>
+
+        <p>
+            <label>Dni :</label>
+            <input type="number" id="dni" name="dni" />
+            <label id="letraDni"></label>
+        </p>
+
+
+        <p>
+            <label>Fecha nacimiento :</label>
+            <input type="date" id="fNac" name="fNac" />
+
+
+        </p>
+
+        <p id="saludo" name="saludo"></p>
     </form>
     <script>
         let p1 = Object.create(persona);
-        let resultado = document.getElementById("resultado");
         let nombre = document.getElementById("nombre");
+        let apellido1 = document.getElementById("apellido1");
+        let apellido2 = document.getElementById("apellido2");
+        let dni = document.getElementById("dni");
+        let letraDni = document.getElementById("letraDni");
+        let saludo = document.getElementById("saludo");
+        let fNac = document.getElementById("fNac");
+
+        nombre.addEventListener("change", () => {
+            p1.setNombre(nombre.value);
+            saludo.innerHTML = p1.saludar();
+        });
+        apellido1.addEventListener("change", () => {
+            p1.setApellido1(apellido1.value);
+            saludo.innerHTML = p1.saludar();
+        });
+        apellido2.addEventListener("change", () => {
+            p1.setApellido2(apellido2.value);
+            saludo.innerHTML = p1.saludar();
+        });
+        dni.addEventListener("change", () => {
+            p1.setDni(dni.value);
+            letraDni.innerHTML = "Letra : " + p1.calcularLetra();
+            saludo.innerHTML = p1.saludar();
+        });
+
+        fNac.addEventListener("change", () => {
+            p1.setFechaNacimiento(fNac.value);
+            saludo.innerHTML = p1.saludar();
 
 
-        function escribirResultado() {
-            resultado.innerHTML = p1.cambiarNombre(nombre.value);
-        }
-
-        nombre.addEventListener("change", escribirResultado)
+        });
     </script>
 </body>
 
