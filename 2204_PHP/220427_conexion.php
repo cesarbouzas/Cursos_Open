@@ -28,10 +28,10 @@
             $apellido1=$_POST['apellido1'];
             $apellido2=$_POST['apellido2'];
             $DNI=$_POST['dni'];
-            echo $nombre.$apellido1.$apellido2.$DNI; 
+            echo $nombre." ".$apellido1."".$apellido2."".$DNI; 
             mysqli_select_db($conexion," id18840812_example");
             
-            $sql="INSERT INTO `usuarios` (`nombre`, `apellido1`, `apellido2`, `DNI`) VALUES ('$nombre', '$apellido1', '$apellido2', '$DNI')";
+            $sql="INSERT INTO usuarios VALUES ('$nombre', '$apellido1', '$apellido2', '$DNI')";
 
   
                 
