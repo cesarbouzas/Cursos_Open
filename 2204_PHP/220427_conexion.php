@@ -27,12 +27,12 @@
             $nombre=$_POST['nombre'];
             $apellido1=$_POST['apellido1'];
             $apellido2=$_POST['apellido2'];
-            $DNI=$_POST['dni'];
-            echo $nombre." ".$apellido1."".$apellido2."".$DNI; 
+            $dni=$_POST['dni'];
+            echo $nombre." ".$apellido1." ".$apellido2." ".$dni; 
             mysqli_select_db($conexion," id18840812_example");
             
-            $sql="INSERT INTO usuarios VALUES ('$nombre', '$apellido1', '$apellido2', '$DNI')";
-
+            $sql="INSERT INTO usuarios VALUES ($nombre, $apellido1, $apellido2, $dni);";
+            
   
                 
                         if(mysqli_query($conexion,$sql)){
