@@ -26,6 +26,19 @@ function imprimirArra(a) {
 
 }
 
+let res = 0;
+for (let i = 0; i < b.length; i++) {
+    res += b[i];
+    if (b[i] % 2 == 0) {
+        console.log(b[i] + " es par");
+
+    } else {
+        console.log(b[i]);
+    }
+
+}
+console.log(res);
+
 imprimirArra(b);
 imprimirParesArra(b);
 console.log(sumarElementosArra(b));
