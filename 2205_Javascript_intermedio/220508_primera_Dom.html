@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Primer ejemplo de Dom</title>
+</head>
+
+<body>
+
+    <p>Mi primer documento de DOM (Open)</p>
+    <ul id="to_do_list">
+
+    </ul>
+
+
+
+
+    <script type="text/javascript">
+        let parrafos = document.getElementsByTagName("p");
+        console.log(parrafos[0].innerText);
+        parrafos[0].innerHTML = parrafos[0].innerText + " y ahora ...con javascript</br>me comes los huevos por detras";
+
+        let tareas = ["hacer la colada", "preparar la cena", "tirar la absura"];
+        let to_do = document.querySelector("#to_do_list");
+
+        for (let i = 0; i < tareas.length; i++) {
+            let tarea = tareas[i];
+            let li = document.createElement("li");
+            li.textContent = tarea;
+            to_do.appendChild(li);
+        }
+
+        setTimeout(eliminarTarea, 2000);
+
+
+        function eliminarTarea() {
+            let text = "preparar la cena";
+            let tareas = document.getElementsByTagName("li");
+            for (let i = 0; i < tareas.length; i++) {
+                console.log(tareas[i].innerText);
+                if (tareas[i].innerText == text) {
+                    tareas[i].remove();
+                }
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+<body style="width: 500px; height: 500px">
+
+    <p>
+        X=<label id="x">x=</label> Y=<label id="y">y=</label>
+    </p>
+    <button id="cambiar">Cambiar Color</button>
+    <p id="tecla">Pulsa una Tecla</p>
+
+
+
+
+
+
+    <script type="text/javascript">
+        function cambiarColor() {
+            console.log();
+            let cuerpo = document.body;
+            cuerpo.style.backgroundColor = "rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")";
+        }
+
+        function mostrar_X(ev) {
+            let etiqueta_X = document.getElementById("x");
+            etiqueta_X.innerText = ev.clientX;
+
+        }
+
+        function mostar_Y(ev) {
+            let etiqueta_Y = document.getElementById("y");
+            etiqueta_Y.innerText = ev.clientY;
+        }
+
+        function mostrarTecla(ev) {
+            console.log(ev);
+            document.getElementById("tecla").innerHTML = "tecla =" + ev.key + " codigo ascii= " + ev.keyCode
+
+        }
+
+        document.body.addEventListener("mousemove", mostrar_X);
+        document.body.addEventListener("mousemove", mostar_Y);
+        document.getElementById("cambiar").addEventListener("click", cambiarColor);
+        document.addEventListener("keypress", mostrarTecla);
+    </script>
+</body>
+
+</html>
