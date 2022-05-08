@@ -1,7 +1,7 @@
 let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //let b = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 //let c = a.slice();
-
+//no actualiza
 
 function sumarElementosArra(a) {
     let resultado = 0;
