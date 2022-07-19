@@ -29,9 +29,11 @@ public class Externa {
 	public class Anidada {
 		
 		private String s;
+		
 
 		public Anidada(String s) {
 			this.s = s;
+			
 		}
 
 		public String getS() {

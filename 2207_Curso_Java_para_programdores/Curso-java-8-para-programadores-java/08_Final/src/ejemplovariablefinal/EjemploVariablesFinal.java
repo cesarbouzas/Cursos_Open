@@ -21,6 +21,7 @@ public class EjemploVariablesFinal {
 		final Persona p = new Persona("12345678A", "Pepe", "Perez", Persona.HOMBRE, LocalDate.of(1950, 1, 1));
 		System.out.println(p);
 		p.setNombre("José");
+		p.setSexo(Persona.MUJER);
 		System.out.println(p);
 		
 		//No nos permite realizar esta reasignación del objeto
@@ -43,11 +44,12 @@ public class EjemploVariablesFinal {
 		//Esta referencia NO final sí que puede ser reasignada
 		p2 = new Persona("23456789B", "Ana", "Martínez", Persona.MUJER, LocalDate.of(1960, 2, 2));
 		System.out.println(p2);
-		
+		EjemploVariablesFinal.metodoConParametroFinal(p2);
 	}
 	
 
 	public static Persona metodoConParametroFinal(final Persona p) {
+		System.out.println(p.getDni());
 		//No nos permite realizar esta reasignación del objeto
 		//p = new Persona("23456789B", "Ana", "Martínez", Persona.MUJER, LocalDate.of(1960, 2, 2));
 		return p;

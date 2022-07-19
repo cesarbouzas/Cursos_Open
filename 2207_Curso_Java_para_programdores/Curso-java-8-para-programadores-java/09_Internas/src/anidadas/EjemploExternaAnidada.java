@@ -35,6 +35,8 @@ public class EjemploExternaAnidada {
 		
 		System.out.println(i.getN());
 		System.out.println(i2.getN());
+		System.out.println(e.getN());
+
 
 	}
 

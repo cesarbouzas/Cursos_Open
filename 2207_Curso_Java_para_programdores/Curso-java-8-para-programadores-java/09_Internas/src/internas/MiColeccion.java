@@ -16,7 +16,7 @@ public class MiColeccion {
 	
 	public MiColeccion() {
 		for(int i = 0; i < TAM; i++)
-			array[i] = i+1;
+			array[i] = i;
 	}
 	
 	public void imprimirPares() {
