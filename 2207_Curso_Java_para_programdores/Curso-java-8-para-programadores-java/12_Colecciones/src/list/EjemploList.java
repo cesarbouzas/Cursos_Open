@@ -6,6 +6,7 @@ package list;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 
 import modelo.Persona;
@@ -21,8 +22,8 @@ public class EjemploList {
 	 */
 	public static void main(String[] args) {
 		
-		List<Persona> listaPersonas = new ArrayList<>();
-		//List<Persona> listaPersonas = new LinkedList<>();
+		//List<Persona> listaPersonas = new ArrayList<>();
+		List<Persona> listaPersonas = new LinkedList<>();
 		
 		listaPersonas.add(new Persona("12345678A", "Pepe", "Perez", LocalDate.of(1990, 1, 2)));
 		listaPersonas.add(new Persona("23456789B", "Juan", "Martínez", LocalDate.of(1991, 2, 3)));
